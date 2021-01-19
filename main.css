@@ -81,11 +81,11 @@ a:hover {
 }
 
 .photo-wrapper {
-  padding: 1em;
+  padding: 2em;
 }
 
 .photo {
-  padding: 0.2em;
+  padding: 0.5em;
   border: 1px solid #e8e9ed;
   border-radius: 3px;
 }
