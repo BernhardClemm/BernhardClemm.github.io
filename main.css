@@ -147,3 +147,11 @@ a:hover {
 .twitter-timeline {
   max-height: 700px;
 }
+
+.img-gif {
+  padding-bottom: 10px; 
+  padding-top: 10px; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

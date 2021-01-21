@@ -58,32 +58,45 @@
 			<!-- Left column -->
 	        <div class="col-lg-8 col-md-8 col-sm-12">
 
+	        	
+
 	        	<!-- News -->
 	        	<div class="text-start">
-	        		<p><b>"Visualizing regression" (Shiny App):</b> One-predictor regression may be intuitive, but what about a model with several predictors? This app offers an intuitive understanding of what OLS regression does. It lets you visualize OLS fitting with one or two predictors as well as an interaction.
-	        		<br>
-	        			<a href="https://bernhardclemm.shinyapps.io/visualize-regression-shiny/" target="_blank">Link</a> | 
+
+	        		<h4>Interactive apps and visualization</h4>
+
+	        		<p><b>"Visualizing regression" (Shiny App):</b> One-predictor regression may be intuitive enough, but what about a model with several predictors and interactions? This app offers an intuitive understanding of what "ordinary least squares" does, by showing how it fits a line or plane to the data points. 
+	        			<a href="https://bernhardclemm.shinyapps.io/visualize-regression-shiny/" target="_blank">App</a> | 
 	        			<a href="https://github.com/BernhardClemm/visualize-regression-shiny" target="_blank">Code</a> 
 	        		</p>
 	        		</p>
 	        		<img src="img/regression.gif" class="img-fluid">
 	        		</p>
-	        		<p><b>Shiny App for visualizing Twitter identities geographically:</b> This prototype version uses a non-representative sample of US Twitter users, whose self-descriptions are coded into several identity variables: First, social identities ("mother/mom/mommy", "father/dad/daddy", "husband", "wife") and second, political identities ("conservative", "liberal", "#maga", "#resist"). The app will later be updated to show the most prevalent social and political identities among the full sample of geo-codable Twitter users. 
-	        			<br>
-	        			<a href="https://bernhardclemm.shinyapps.io/twitter-identities-shiny/" target="_blank">Link</a> | 
+	        		<p><b>Visualizing Twitter identities geographically (Shiny App):</b> People on twitter often reveal something about themselves in their self-descriptions. Some are just "moms", others are a "Conservative, Republican, father and husband", others are just hashtagging themselves as "#blm, #resistance #biden2020". This app (prototype!) makes an attempt to map these identities, using a sample of US Twitter users.
+	        			<a href="https://bernhardclemm.shinyapps.io/twitter-identities-shiny/" target="_blank">App</a> | 
 	        			<a href="https://github.com/BernhardClemm/twitter-identities-shiny" target="_blank">Code</a> 
 	        		</p>
-	        		<p><b>R function for finding a "typical" tree in a random forest:</b> Trees are built by recursively partitioning the data on the variable and cutoff value for which some difference between the two partitions is maximized (e.g. treatment heterogeneity in a causal tree). I find a "typical" tree by subsetting the forest to those trees that share the most common first partition variable; further to those trees sharing the most common second partition variable; and so on, until only one or two trees are left. 
-	        			<br>
-	        			<a href="https://github.com/BernhardClemm/typical-tree-grf" target="_blank">Code</a>
-	        		<p><b>Python function for approximating following dates of Twitter followers:</b> The Twitter API does not provide information about when a Twitter user started following another. This Python script allows you to infer the earliest possible date a user can have started following another user. It exploits the fact that Twitter orders the list of followers according to date of following, and provides dates at which a user account was created. 
-	        			<br>
-	        			<a href="https://github.com/BernhardClemm/twitter-follow-dates" target="_blank">Code</a>
-	        		<p><b>"The role of randomization" (Shiny App):</b> Experiments are considered the "gold standard" of causal inference because through randomization, treatment groups are in expectation equal on known as well unknown variables. The app illustrates this by allowing users to re-assign treatment groups and observe distributions on a number of background variables. 
-	        			<br>
-	        			<a href="https://bernhardclemm.shinyapps.io/role-of-randomization-shiny/" target="_blank">Link</a> | 
+	        		</p>
+	        		<img src="img/twitter.gif" class="img-fluid img-gif">
+	        		</p>
+	        		<p><b>"The role of randomization" (Shiny App):</b> Experiments are considered the "gold standard" of causal inference: Through randomization, treatment groups are in expectation equal on known as well unknown variables. The app illustrates this by allowing users to re-assign treatment groups and observe group differences on a number of variables such as age and gender.
+	        			<a href="https://bernhardclemm.shinyapps.io/role-of-randomization-shiny/" target="_blank">App</a> | 
 	        			<a href="https://github.com/BernhardClemm/role-of-randomization-shiny" target="_blank">Code</a> 
 	        		</p>
+	        		</p>
+	        		<img src="img/randomization.gif" class="img-fluid img-gif">
+	        		</p>
+	        		<hr>
+
+	        		<h4>Code</h4>
+					<p><b>Parsing Factiva output:</b> Factiva is a great resource for working with past news articles. Which does not mean it's practical to use. Exporting search results to some processable format like csv is tedious: Your options are a PDF (not structured well enough for online converters), an RTF (again no luck with online converters) or HTML. This R function does the job of parsing Factiva results into a data frame. 
+						<a href="https://github.com/BernhardClemm/factiva-parsing" target="_blank">Code</a>
+	        		<p><b>R function for finding a "typical" tree in a random forest:</b> Trees are built by recursively partitioning the data on the variable and cutoff value for which some difference between the two partitions is maximized (e.g. treatment heterogeneity in a causal tree). I find a "typical" tree by subsetting the forest to those trees that share the most common first partition variable; further to those trees sharing the most common second partition variable; and so on, until only one or two trees are left. <a href="https://github.com/BernhardClemm/typical-tree-grf" target="_blank">Code</a>
+	        		<p><b>Python function for approximating following dates of Twitter followers:</b> The Twitter API does not provide information about when a Twitter user started following another. This Python script allows you to infer the earliest possible date a user can have started following another user. It exploits the fact that Twitter orders the list of followers according to date of following, and provides dates at which a user account was created. 
+	        			<a href="https://github.com/BernhardClemm/twitter-follow-dates" target="_blank">Code</a>
+	        			<br>
+	        		</p>	
+	        		
 	        	</div>
 	        </div>
 
