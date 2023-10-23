@@ -9,7 +9,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Political psychology and big data">
+  <meta name="description" content="Quantitative Political Scientist">
   <meta name="author" content="Bernhard Clemm">
 
   <!-- Styles -->
@@ -63,17 +63,23 @@
 	        	<!-- News -->
 	        	<div class="text-start">
 
-	        		<h4>Data sets</h4>
-	        		<p><b>"A list of over 5000 US news domains and their social media accounts"</b>: A list of US news domains with their associated social media accounts and ideology scores from Robertson et al. (2018).
-	        			<a href="https://github.com/ercexpo/us-news-domains" target="_blank">Data set</a> | 
-	        			<a href="https://doi.org/10.5281/zenodo.5681483" target="_blank">Release</a> 
-	        		</p>
-	        		<p><b>"A list of Polish news domains with ideology scores and social media accounts"</b>: A list of Polish news domains with their associated social media accounts and ideology scores, estimated with a variant of the <a href="https://github.com/SMAPPNYU/mediascores" target="_blank">mediascores</a> model.
-	        			<a href="https://github.com/ercexpo/polish-news-domains" target="_blank">Data</a> |
-	        			<a href="https://zenodo.org/record/5746987" target="_blank">Release</a> 
-	        		</p>
+	        		<h4>Code and packages</h4>
+	        			<p>
+									<b>WebtrackR package</b> As a collaborator on this package, I am working on functions for preprocessing and analysing web browsing data, such as extracting components of URLs, estimating the duration of page visits and classifying visits.
+									<a href="https://github.com/schochastics/webtrackR" target="_blank">Code</a>
+	        			<p>
+								<p>
+									<b>Parsing Factiva output:</b> Factiva is a great resource for working with past news articles. Which does not mean it's practical to use. Exporting search results to some processable format like csv is tedious: Your options are a PDF (not structured well enough for online converters), an RTF (again no luck with online converters) or HTML. This R function does the job of parsing Factiva results into a data frame. 
+									<a href="https://github.com/BernhardClemm/factiva-parsing" target="_blank">Code</a>
+<!-- 	        			<p>
+	        				<b>R function for finding a "typical" tree in a random forest:</b> Trees are built by recursively partitioning the data on the variable and cutoff value for which some difference between the two partitions is maximized (e.g. treatment heterogeneity in a causal tree). I find a "typical" tree by subsetting the forest to those trees that share the most common first partition variable; further to those trees sharing the most common second partition variable; and so on, until only one or two trees are left. <a href="https://github.com/BernhardClemm/typical-tree-grf" target="_blank">Code</a> -->
+	        			<p> 
+	        				<b>Python function for approximating following dates of Twitter followers:</b> The Twitter API (now defunct!) does not provide information about when a Twitter user started following another. This Python script allows you to infer the earliest possible date a user can have started following another user, exploiting the fact that Twitter orders the list of followers according to date of following.
+	        			<a href="https://github.com/BernhardClemm/twitter-follow-dates" target="_blank">Code</a>
+	        			<br>
+	        		</p>	
 
-	        		<h4>Interactive apps and visualization</h4>
+	        		<h4>Interactive apps and visualizations</h4>
 
 	        		<p><b>"Visualizing regression" (Shiny App):</b> One-predictor regression may be intuitive enough, but what about a model with several predictors and interactions? This app offers an intuitive understanding of what "ordinary least squares" does, by showing how it fits a line or plane to the data points. 
 	        			<a href="https://bernhardclemm.shinyapps.io/visualize-regression-shiny/" target="_blank">App</a> | 
@@ -82,13 +88,13 @@
 	        		</p>
 	        		<img src="img/regression.gif" class="img-fluid">
 	        		</p>
-	        		<p><b>Visualizing Twitter identities geographically (Shiny App):</b> People on twitter often reveal something about themselves in their self-descriptions. Some are just "moms", others are a "Conservative, Republican, father and husband", others are just hashtagging themselves as "#blm, #resistance #biden2020". This app (prototype!) makes an attempt to map these identities, using a sample of US Twitter users.
+<!-- 	        		<p><b>Visualizing Twitter identities geographically (Shiny App):</b> People on twitter often reveal something about themselves in their self-descriptions. Some are just "moms", others are a "Conservative, Republican, father and husband", others are just hashtagging themselves as "#blm, #resistance #biden2020". This app (prototype!) makes an attempt to map these identities, using a sample of US Twitter users.
 	        			<a href="https://bernhardclemm.shinyapps.io/twitter-identities-shiny/" target="_blank">App</a> | 
 	        			<a href="https://github.com/BernhardClemm/twitter-identities-shiny" target="_blank">Code</a> 
 	        		</p>
 	        		</p>
 	        		<img src="img/twitter.gif" class="img-fluid img-gif">
-	        		</p>
+	        		</p> -->
 	        		<p><b>"The role of randomization" (Shiny App):</b> Experiments are considered the "gold standard" of causal inference: Through randomization, treatment groups are in expectation equal on known as well unknown variables. The app illustrates this by allowing users to re-assign treatment groups and observe group differences on a number of variables such as age and gender.
 	        			<a href="https://bernhardclemm.shinyapps.io/role-of-randomization-shiny/" target="_blank">App</a> | 
 	        			<a href="https://github.com/BernhardClemm/role-of-randomization-shiny" target="_blank">Code</a> 
@@ -98,21 +104,17 @@
 	        		</p>
 	        		<hr>
 
-	        		<h4>Code</h4>
-	        			<p>
-									<b>WebtrackR package</b> As a collaborator on this package, I am working on functions for preprocessing and analysing web browsing data, such as extracting components of URLs, estimating the duration of page visits and classifying visits.
-									<a href="XXX" target="_blank">Code</a>
-	        			<p>
-								<p>
-									<b>Parsing Factiva output:</b> Factiva is a great resource for working with past news articles. Which does not mean it's practical to use. Exporting search results to some processable format like csv is tedious: Your options are a PDF (not structured well enough for online converters), an RTF (again no luck with online converters) or HTML. This R function does the job of parsing Factiva results into a data frame. 
-									<a href="https://github.com/BernhardClemm/factiva-parsing" target="_blank">Code</a>
-	        			<p>
-	        				<b>R function for finding a "typical" tree in a random forest:</b> Trees are built by recursively partitioning the data on the variable and cutoff value for which some difference between the two partitions is maximized (e.g. treatment heterogeneity in a causal tree). I find a "typical" tree by subsetting the forest to those trees that share the most common first partition variable; further to those trees sharing the most common second partition variable; and so on, until only one or two trees are left. <a href="https://github.com/BernhardClemm/typical-tree-grf" target="_blank">Code</a>
-	        			<p>
-	        				<b>Python function for approximating following dates of Twitter followers:</b> The Twitter API does not provide information about when a Twitter user started following another. This Python script allows you to infer the earliest possible date a user can have started following another user. It exploits the fact that Twitter orders the list of followers according to date of following, and provides dates at which a user account was created. 
-	        			<a href="https://github.com/BernhardClemm/twitter-follow-dates" target="_blank">Code</a>
-	        			<br>
-	        		</p>	
+	        		<h4>Data sets</h4>
+	        		<p><b>"A list of over 5000 US news domains and their social media accounts"</b>: A list of US news domains with their associated social media accounts and ideology scores from Robertson et al. (2018).
+	        			<a href="https://github.com/ercexpo/us-news-domains" target="_blank">Data set</a> | 
+	        			<a href="https://doi.org/10.5281/zenodo.5681483" target="_blank">Release</a> 
+	        		</p>
+	        		<p><b>"A list of Polish news domains with ideology scores and social media accounts"</b>: A list of Polish news domains with their associated social media accounts and ideology scores, estimated with a variant of the <a href="https://github.com/SMAPPNYU/mediascores" target="_blank">mediascores</a> model.
+	        			<a href="https://github.com/ercexpo/polish-news-domains" target="_blank">Data set</a> |
+	        			<a href="https://zenodo.org/record/5746987" target="_blank">Release</a> 
+	        		</p>
+
+	        		
 	        		
 	        	</div>
 	        </div>
@@ -129,17 +131,17 @@
 		          	</div>
 	                <div class="contacts centered">
 	                    <h5>Bernhard Clemm von Hohenberg</h5>
-						<p class="smalltext">Computational Social Scientist</p>
+						<p class="smalltext">Quantitative Political Scientist</p>
 						<div class="profile-links"> 
 							<p class="contacts smalltext">
 								<i class="fa fa-twitter"></i><a href="http://www.twitter.com/bernhardclemm/" target="_blank"> Twitter   </a>
-								<i class="fa fa-linkedin"></i><a href="https://linkedin.com/in/bernhard-clemm-04a7babb" target="_blank"> LinkedIn   </a> 
-								<i class="fa fa-medium"></i><a href="https://medium.com/@bernhard.clemm" target="_blank"> Medium   </a> 
+								<i class="fa fa-linkedin"></i><a href="https://nl.linkedin.com/in/dr-bernhard-clemm-04a7babb" target="_blank"> LinkedIn   </a> 
+								<i class="fa fa-medium"></i><a href="https://bernhard-clemm.medium.com/" target="_blank"> Medium   </a> 
 							</p>
 							<p class="contacts smalltext">
 								<i class="fa fa-github"></i><a href="http://www.github.com/bernhardclemm/" target="_blank"> Github   </a> 
 								<i class="fa fa-graduation-cap"></i><a href="https://scholar.google.com/citations?user=4bSTFa0AAAAJ" target="_blank"> Google Scholar  </a>
-								<i class="fa fa-pencil-square-o"></i><a href="https://publons.com/researcher/3222830/bernhard-clemm-von-hohenberg" target="_blank"> Publons </a>
+								<!-- <i class="fa fa-pencil-square-o"></i><a href="https://publons.com/researcher/3222830/bernhard-clemm-von-hohenberg" target="_blank"> Publons </a> -->
 							</p>
 						</div>
 					</div>
