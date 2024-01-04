@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Analyis of Web Browsing Data",
+    "section": "",
+    "text": "This guide walks readers through code implementing the analytical steps described in Clemm von Hohenberg, Bernhard, et al. “Analysis of Web Browsing Data: A Guide.” (2023). It is a more extended, and continually updated, version of the Supplementary Materials (Part B) published with the paper.\n\n\nR. To run the R code, you need to install and load the following packages.\n\n# install.packages(\"tidyverse\")\n# install.packages(\"adaR\")\n## install.packages(\"devtools\")\n# devtools::install_github(\"schochastics/webtrackR\")\n# install.packages(\"httr\")\n# install.packages(\"httr2\")\n\nlibrary(tidyverse)\nlibrary(adaR)\nlibrary(webtrackR)\nlibrary(httr)\nlibrary(httr2)\n\nThe computational environment in which all the below R code was run is the following:\n\n\nR version 4.3.1 (2023-06-16)\nPlatform: x86_64-apple-darwin20 (64-bit)\nRunning under: macOS Ventura 13.6.1\n\nMatrix products: default\nBLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib \nLAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0\n\nlocale:\n[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8\n\ntime zone: Europe/Amsterdam\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n [1] httr2_0.2.3          httr_1.4.7           webtrackR_0.1.0.9000\n [4] adaR_0.3.0           lubridate_1.9.2      forcats_1.0.0       \n [7] stringr_1.5.1        dplyr_1.1.4          purrr_1.0.2         \n[10] readr_2.1.4          tidyr_1.3.0          tibble_3.2.1        \n[13] ggplot2_3.4.4        tidyverse_2.0.0     \n\n\nSQL. All SQL code was run on AWS Athena, but should work with any SQL platform that understands the Presto dialect.\n\n\n\nTo run the code, you first need to download a toy data set from our OSF repository at https://osf.io/jmyek and put in your working directory. This is based on a real data set collected from a US sample in 2019. We anonymized the data by deleting (most of) the query strings and paths and excluding rare domains. You can also work with your own data, which should have at least three columns called panelist_id, url and timestamp (in POSIXct format).\nR. Load the data set and rename it to distinguish the object we work with in tidy R and with webtrackR.\n\nload(\"testdt_tracking.rda\")\ndt &lt;- testdt_tracking\n\n\nload(\"testdt_tracking.rda\")\nwt &lt;- as.wt_dt(testdt_tracking)\n\nSQL. You can export the above data as csv and re-import it as a table into your SQL environment."
+  },
+  {
+    "objectID": "index.html#computational-environment",
+    "href": "index.html#computational-environment",
+    "title": "Analyis of Web Browsing Data",
+    "section": "",
+    "text": "R. To run the R code, you need to install and load the following packages.\n\n# install.packages(\"tidyverse\")\n# install.packages(\"adaR\")\n## install.packages(\"devtools\")\n# devtools::install_github(\"schochastics/webtrackR\")\n# install.packages(\"httr\")\n# install.packages(\"httr2\")\n\nlibrary(tidyverse)\nlibrary(adaR)\nlibrary(webtrackR)\nlibrary(httr)\nlibrary(httr2)\n\nThe computational environment in which all the below R code was run is the following:\n\n\nR version 4.3.1 (2023-06-16)\nPlatform: x86_64-apple-darwin20 (64-bit)\nRunning under: macOS Ventura 13.6.1\n\nMatrix products: default\nBLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib \nLAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0\n\nlocale:\n[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8\n\ntime zone: Europe/Amsterdam\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n [1] httr2_0.2.3          httr_1.4.7           webtrackR_0.1.0.9000\n [4] adaR_0.3.0           lubridate_1.9.2      forcats_1.0.0       \n [7] stringr_1.5.1        dplyr_1.1.4          purrr_1.0.2         \n[10] readr_2.1.4          tidyr_1.3.0          tibble_3.2.1        \n[13] ggplot2_3.4.4        tidyverse_2.0.0     \n\n\nSQL. All SQL code was run on AWS Athena, but should work with any SQL platform that understands the Presto dialect."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html#data",
+    "href": "index.html#data",
+    "title": "Analyis of Web Browsing Data",
+    "section": "",
+    "text": "To run the code, you first need to download a toy data set from our OSF repository at https://osf.io/jmyek and put in your working directory. This is based on a real data set collected from a US sample in 2019. We anonymized the data by deleting (most of) the query strings and paths and excluding rare domains. You can also work with your own data, which should have at least three columns called panelist_id, url and timestamp (in POSIXct format).\nR. Load the data set and rename it to distinguish the object we work with in tidy R and with webtrackR.\n\nload(\"testdt_tracking.rda\")\ndt &lt;- testdt_tracking\n\n\nload(\"testdt_tracking.rda\")\nwt &lt;- as.wt_dt(testdt_tracking)\n\nSQL. You can export the above data as csv and re-import it as a table into your SQL environment."
+  }
+]
